@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Editing a category</h1>
+
+    {{ form_start(form) }}
+
+    {{ form_row(form.name) }}
+    {{ form_row(form.description) }}
+
+    <div class="text-right">
+        <button type="submit" class="btn btn-primary">
+            Submit
+        </button>
+        <a href="{{ path('app_admin_category_index') }}" class="btn btn-outline-secondary">
+            Return
+        </a>
+    </div>
+    {{ form_end(form) }}
+{% endblock %}
+

@@ -1,0 +1,29 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>Category Management</h1>
+
+    <a class="btn-outline-primary mb-3" href="{{ path('app_admin_category_edit') }}">
+        Create a category
+    </a>
+    <table class="table">
+        <tr class="table-dark">
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th width="250px"></th>
+        </tr>
+        {% for category in categorys %}
+            <tr>
+                <td>{{ category.id }}</td>
+                <td>{{ category.name }}</td>
+                <td>{{ category.description }}</td>
+                <td><a href="{{ path('admin_category_delete', {'id': category.id}) }}" class="btn btn-primary">
+                        Modify
+                    </a>
+                    <a href="{{ path('admin_category_delete', {id:category.id}) }}" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

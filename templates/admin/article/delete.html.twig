@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Delete an article
+{% endblock %}
+
+{% block body %}
+    <h1>Delete an article</h1>
+
+        {{ form_start(delete_form) }}
+            {{ form_start(delete_form.confirmation, {label: 'I confirm the deletion of the article' ~ article.title}) }}
+            <button type="submit" class="btn btn-danger">Delete</button>
+        {{ form_end(delete_form) }}
+{% endblock %}
+

@@ -1,0 +1,9 @@
+{{ form_start(article_form) }}
+
+    {{ form_row(article_form.category, {label: 'Category:'}) }}
+    {{ form_row(article_form.title, {label: 'Title:'}) }}
+    {{ form_row(article_form.content, {label: 'Content:'}) }}
+
+    <button type="submit" class="btn btn-success">Register</button>
+
+{{ form_end(article_form) }}

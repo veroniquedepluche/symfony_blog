@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Delete category</h1>
+
+    {{ form_start(delete_form) }}
+        {{ form_row(delete_form.confirmation, {
+            label: 'I confirm the deletion of the category' ~category.name
+        }) }} <!--https://symfony.com/doc/current/form/form_themes.html -->
+
+    <button type="submit" class="btn btn-danger">
+        Delete
+    </button>
+    {{ form_end(delete_form) }}
+
+
+{% endblock %}
+
